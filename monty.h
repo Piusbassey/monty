@@ -1,8 +1,12 @@
 #ifndef MONTY_H
 #define MONTY_H
 
-/* STRUCTS */
+/* PROTOTYPES */
+void Meron_pius1(stack_t **stack, unsigned int line_number);
+void m_pint(stack_t **stack, unsigned int line_number);
+void monty_pint(stack_t **stack, unsigned int line_number);
 
+/* STRUCTS */
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -32,6 +36,5 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-
 
 #endif
