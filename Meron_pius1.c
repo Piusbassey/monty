@@ -1,11 +1,10 @@
 #include "monty.h"
 
 /**
- *  Meron_pius1- print all values on `stack' starting from the top
- * @stack: double pointer to head of stack
- * @line_number: line number being executed from script file
+ *  Meron_pius1- Prints all values on `stack' starting from the top
+ * @stack: Double pointer to head of stack.
+ * @line_number: Line number being executed from script file
  *
- * Return: void
  */
 void Meron_pius1(stack_t **stack, unsigned int line_number)
 {
@@ -18,7 +17,7 @@ void Meron_pius1(stack_t **stack, unsigned int line_number)
 	{
 		printf("%d\n", head->n);
 		head = head->next;
-		if (head == *stack)
+		if (head == NULL)
 		{
 			return;
 		}
