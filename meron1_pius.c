@@ -14,9 +14,9 @@ void meron_pius1_read(stack_t **stack, unsigned int line_number)
 	int m;
 	char *portion_ep;
 
-	for (p = 0; p < 2; p++)
-		mer_pi[p] = malloc(100 * sizeof(char));
-	tri_e(buffer_ep);
+	for (m = 0; m < 2; m++)
+		mer_pi[m] = malloc(100 * sizeof(char));
+	trim_ep(buffer_ep);
 	portion_ep = strtok(buffer_ep, e);
 
 	while (portion_ep != NULL && limit < 2)
