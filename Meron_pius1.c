@@ -1,51 +1,28 @@
 #include "monty.h"
-#include <ctype.h>
 
-/**
- * check_for_digit - checks that a string only contains digits
- * @arg: string to check
- *
- * Return: 0 if only digits, else 1
- */
-static int check_for_digit(char *arg)
+void push_top_ep(stack_t **stack, unsigned int line_number)
 {
-	int i;
+	stack_t *top_ep;
+	stack_t *list_ep;
+	(void)line_number;
 
-	for (i = 0; arg[i]; i++)
+	top_ep = *stack;
+	list_ep = malloc(sizeof(stack_t));
+
+	if (!list_ep)
 	{
-		if (arg[i] == '-' && i == 0)
-			continue;
-		if (isdigit(arg[i]) == 0)
-			return (1);
-	}
-	return (0);
-}
-
-/**
- * Meron_pius1 - push an integer onto the stack
- * @stack: double pointer to the beginning of the stack
- * @line_number: script line number
- *
- * Return: void
- */
-void Meron_pius1(stack_t **stack, unsigned int line_number)
-{
-	char *arg;
-	int n;
-
-	arg = strtok(NULL, "\n\t\r ");
-	if (arg == NULL || check_for_digit(arg))
-	{
-		dprintf(STDOUT_FILENO,
-			"L%u: usage: push integer\n",
-			line_number);
+		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
-	n = atoi(arg);
-	if (!add_node(stack, n))
+	list_ep->n = data;
+	list_ep->next = NULL;
+	list_ep->prev = NULL;
+	if (!top_ep)
+		*stack = list_ep;
+	else
 	{
-		dprintf(STDOUT_FILENO, "Error: malloc failed\n");
-		exit(EXIT_FAILURE);
+		list_ep->next = *stack;
+		top_ep->prev = list_ep;
+		*stack = list_ep;
 	}
-	var.stack_len++;
 }
