@@ -39,7 +39,6 @@ typedef struct instruction_s
  * Return: void
  */
 void Meron_pius1(stack_t **stack, unsigned int line_number);
-
 /**
  * m_pint - Placeholder function, replace with actual implementation.
  * @stack: Double pointer to the head of the stack.
