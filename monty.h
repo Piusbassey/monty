@@ -31,5 +31,14 @@ void div_data_ep(stack_t **stack, unsigned int line_number);
 void free_stack_ep(stack_t *top_ep);
 void mod_data_ep(stack_t **stack, unsigned int line_number);
 void mul_data_ep(stack_t **stack, unsigned int line_number)
+void print_top_char_ep(stack_t **stack, unsigned int line_number);
+void print_top_ep(stack_t **stack, unsigned int line_number);
+void pop_top_ep(stack_t **stack, unsigned int line_number);
+void print_string_ep(stack_t **stack, unsigned int line_number);
+void push_top_ep(stack_t **stack, unsigned int line_number);
+void rotl_stack_ep(stack_t **stack, unsigned int line_number);
+void rotr_stack_ep(stack_t **stack, unsigned int line_number);
+void stack_mode_ep(stack_t **stack, unsigned int line_number);
+void queue_mode_ep(stack_t **stack, unsigned int line_number);
 
 #endif /* MONTY_H */
