@@ -22,8 +22,14 @@ typedef struct stack_s
 /**
  * Function prototypes
  */
-void process_file(FILE *file, stack_t **stack, char **line, size_t len);
-void process_line(char *line, stack_t **stack, unsigned int line_number);
-void free_stack(stack_t *stack);
+void meron_pius1_read(stack_t **stack, unsigned int line_number);
+void sum_data_mp(stack_t **stack, unsigned int boundary);
+void inactive_ep(stack_t **stack, unsigned int line_number);
+void end_ep(stack_t **stack);
+bool check_string_ep(char *string);
+void div_data_ep(stack_t **stack, unsigned int line_number);
+void free_stack_ep(stack_t *top_ep);
+void mod_data_ep(stack_t **stack, unsigned int line_number);
+void mul_data_ep(stack_t **stack, unsigned int line_number)
 
 #endif /* MONTY_H */
