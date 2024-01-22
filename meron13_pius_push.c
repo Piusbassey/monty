@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * print_string_ep - Prints the string of ASCII chars on the stack.
